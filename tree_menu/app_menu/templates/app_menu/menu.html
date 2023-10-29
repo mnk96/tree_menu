@@ -1,0 +1,12 @@
+{% extends 'app_menu/base.html' %}
+
+{% block title %} Дерево меню {{ menu_name }} {% endblock %}
+
+
+{% load tree_menu_tags %}
+
+{% block content %}
+{% if menu_name %}
+  {% draw_menu menu_name %}
+{% endif %}
+{% endblock %}

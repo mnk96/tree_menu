@@ -1,0 +1,12 @@
+{% extends 'app_menu/base.html' %}
+
+{% block title %} Меню {% endblock %}
+{% load tree_menu_tags %}
+
+{% block content %}
+{% if menus_name %}
+        {% for menu in menus_name %}
+            <li><a href={% url 'app_menu:draw_menu' menu.url %}>{{ menu }}</li>
+        {% endfor %}
+{% endif %}
+{% endblock %}
